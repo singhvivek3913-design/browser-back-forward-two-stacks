@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <a class="brand" href="#" id="brandHome">
+            <span class="brand-mark">R</span>
+            Recipe Explorer
+        </a>
+
+        <div class="nav-controls">
+            <button id="backBtn" disabled>← Back</button>
+            <button id="forwardBtn" disabled>Forward →</button>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <div>
+                <p class="eyebrow">COOK SOMETHING GOOD</p>
+                <h1>Find your next<br>
+                    <span>favourite recipe.</span>
+                </h1>
+                <p class="hero-copy">
+                    Simple recipes, everyday ingredients,
+                    and ideas for your next meal.
+                </p>
+            </div>
+
+            <div class="hero-art">🥗</div>
+        </section>
+
+        <section id="homeView">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">EXPLORE</p>
+                    <h2>Recipes for every day</h2>
+                </div>
+
+                <input
+                    id="searchInput"
+                    type="search"
+                    placeholder="Search recipes..."
+                >
+            </div>
+
+            <div class="categories" id="categoryList">
+                <button class="category active" data-category="All">
+                    All recipes
+                </button>
+
+                <button class="category" data-category="Breakfast">
+                    Breakfast
+                </button>
+
+                <button class="category" data-category="Lunch">
+                    Lunch
+                </button>
+
+                <button class="category" data-category="Dinner">
+                    Dinner
+                </button>
+
+                <button class="category" data-category="Dessert">
+                    Dessert
+                </button>
+            </div>
+
+            <div id="recipeGrid" class="recipe-grid"></div>
+
+            <p id="emptyMessage" hidden>
+                No recipes found. Try another search.
+            </p>
+
+        </section>
+
+        <section id="detailView" class="detail-view" hidden>
+        </section>
+
+        <footer>
+            Made as a mini project to demonstrate
+            <strong>Back & Forward navigation using two stacks.</strong>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
