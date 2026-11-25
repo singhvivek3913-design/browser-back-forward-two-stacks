@@ -1,46 +1,42 @@
+# Browser Back and Forward Navigation Using Two Stacks
 
-# Recipe Explorer
+## Project Overview
+This is a simple mini project that demonstrates how browser back and forward navigation works using the Stack data structure.
 
-Recipe Explorer is a simple recipe website built using HTML, CSS and JavaScript.
-
-The main purpose of this mini project is to demonstrate the Data Structure concept of **Stack** through Browser Back and Forward navigation.
+The project uses two stacks:
+- **Back Stack:** Stores previously visited pages.
+- **Forward Stack:** Stores pages visited after going back.
 
 ## Features
-
-- Browse different recipes.
+- Browse different recipe pages.
+- Navigate between recipes.
+- Go back to previously visited pages.
+- Go forward to recently visited pages.
+- Search recipes.
 - Filter recipes by category.
-- Search recipes by name.
-- View ingredients and cooking instructions.
-- Navigate between previously visited pages.
-- Back and Forward buttons using two stacks.
 
-## DSA Concept Used
+## Data Structure Used
+**Stack (LIFO – Last In, First Out)**
 
-This project uses two stacks:
-
-1. Back Stack
-2. Forward Stack
-
-### How it works
-
-- When a new page is opened, the current page is pushed into the Back Stack.
-- When the Back button is clicked, the current page is pushed into the Forward Stack.
-- The previous page is restored using pop().
-- When Forward is clicked, the current page is pushed into the Back Stack.
-- The next page is restored using pop().
-- When a new page is visited after going back, the Forward Stack is cleared.
+Two stacks are used to manage browser-like navigation:
+1. `backStack`
+2. `forwardStack`
 
 ## Technologies Used
-
 - HTML
 - CSS
 - JavaScript
-- Stack Data Structure
+
+## How It Works
+1. When a user visits a new page, the current page is pushed into the back stack.
+2. When the user clicks Back, the current page is pushed into the forward stack.
+3. When the user clicks Forward, the current page is pushed into the back stack.
+4. When a new page is visited, the forward stack is cleared.
 
 ## How to Run
-
-1. Clone or download this repository.
+1. Download or clone this repository.
 2. Open the project folder.
-3. Open index.html in your browser.
+3. Open `index.html` in any web browser.
 
-No backend or installation is required.
+## Project Type
+DSA Mini Project – Stack Implementation
